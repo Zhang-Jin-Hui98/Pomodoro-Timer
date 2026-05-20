@@ -1,0 +1,6 @@
+{
+  "name": "AetherFocus",
+  "description": "Aesthetic Blue Pomodoro Timer with synthesized Web Audio ambient soundscapes, digital clock ticks, and task list.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

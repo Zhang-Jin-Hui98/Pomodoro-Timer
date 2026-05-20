@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  
+  --color-brand-50: #e0f2fe;
+  --color-brand-100: #bae6fd;
+  --color-brand-200: #7dd3fc;
+  --color-brand-300: #38bdf8;
+  --color-brand-400: #0ea5e9;
+  --color-brand-500: #0284c7;
+  --color-brand-600: #0369a1;
+  --color-brand-700: #075985;
+  --color-brand-800: #0c4a6e;
+  --color-brand-900: #082f49;
+  
+  --color-aether-dark: #030712;
+}
+
+/* Custom styles for AetherFocus glassmorphism effect */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-aether-dark);
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(3, 7, 18, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.3);
+  border-radius: 12px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.5);
+}
+
+@keyframes slow-pulse {
+  0%, 100% {
+    transform: scale(1) translate(0px, 0px);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.1) translate(15px, -15px);
+    opacity: 0.35;
+  }
+}
+
+@keyframes slow-pulse-reverse {
+  0%, 100% {
+    transform: scale(1.1) translate(0px, 0px);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(0.9) translate(-20px, 20px);
+    opacity: 0.15;
+  }
+}
+
+.animate-pulse-slow {
+  animation: slow-pulse 15s infinite ease-in-out;
+}
+
+.animate-pulse-slow-reverse {
+  animation: slow-pulse-reverse 18s infinite ease-in-out;
+}
+
